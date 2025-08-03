@@ -7,7 +7,7 @@ class TestSimpleCalculator(unittest.TestCase):
         """Set up the SimpleCalculator instance before each test."""
         self.calc = SimpleCalculator()
 
-    def test_add(self):
+    def test_addition(self):
         self.assertEqual(self.calc.add(1, 2), 3)
         self.assertEqual(self.calc.add(5, 5), 10)
         self.assertEqual(self.calc.add(-1, -2), -3)
@@ -36,7 +36,7 @@ class TestSimpleCalculator(unittest.TestCase):
 
     def test_divide_by_zero(self):
         self.assertIsNone(self.calc.divide(0, 0))
-        self.assertIsNone(self.calc.divide(5, 0))
+        self.assertIsNone(          self.calc.divide(5, 0))
 
 if __name__ == '__main__':
     unittest.main()
